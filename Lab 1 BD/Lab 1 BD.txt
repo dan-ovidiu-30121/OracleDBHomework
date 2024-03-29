@@ -1,0 +1,9 @@
+select count(*)
+from user_tables
+where table_name like 'F_%'
+
+select *
+from f_staffs
+
+select *
+from f_SHIFT_ASSIGNMENTS

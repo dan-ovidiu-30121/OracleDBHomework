@@ -1,0 +1,30 @@
+practice 1.2
+
+Vocabular
+1. row
+2. primary key
+3. table/RBDMS
+4. foreign key
+5. DBMS (Data Base Management System)
+6. field
+7. DML statements
+8. DDL statements
+9. TCL statements
+10. DCL keywords
+
+Try it/Solve it/Solve
+1. 9
+2. through F_SHIFTS_ASSIGNMENTS (object browser -> F_SHIFTS -> MODELS)
+3. Column name, Data type, Nullable, Default, Primary Key
+4. 2
+5. foreign keys: REGULAR_CODE and PROMO_CODE
+   REGULAR_CODE -> F_REGULAR_MENUS
+   PROMO_CODE -> F_PROMOTIONAL_MENUS
+6. F_SHIFTS: primary Key = CODE ->
+   F_SHIFT_ASSIGNMENTS: primary Key = ID, foreign Key = CODE ->
+   F_STAFFS: primary Key = ID ->
+   F_ORDERS: primary key = ORDER_NUMBER ->
+   F_ORDER_LINES: P/F key: ORDER_NUMBER, P/F: FOOD_ITEM_NUMBER ->
+   F_FOOD_ITEMS: primary Key = FOOD_ITEM_NUMBER, foreign key = REGULAR_CODE ->
+   F_REGULAR_MENUS: primary Key = CODE; 
+7. F_PROMOTIONAL MENUS, F_ORDERS, F_FOOD_ITEMS

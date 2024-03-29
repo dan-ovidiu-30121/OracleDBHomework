@@ -1,0 +1,43 @@
+Practice 5.1
+1. CHAR
+2. fm element
+3. data type conversion functions
+4. NUMBER
+5. VARCHAR2
+6. DATE
+7. TO_CHAR
+8. RR
+9. TO_NUMBER
+10. MM
+11. TO_DATE
+
+Try it and solve it
+1. SELECT LAST_NAME, TO_CHAR(BIRTHDATE,'fmMonth DD, YYYY')
+   FROM F_STAFFS;
+2. SELECT TO_DATE('January 3, 04','Month dd, YYYY')
+   FROM DUAL;
+3. SELECT TO_CHAR(START_DATE, '"The promotion began on the" ddthsp "of" Month YYYY.')
+   FROM F_PROMOTIONAL_MENUS
+   WHERE CODE = 110;
+4. SELECT TO_CHAR(SYSDATE, '"Today is the" Ddthsp "of" Month, Year'
+   FROM DUAL;
+5. SELECT ID, FIRST_NAME || LAST_NAME, TO_CHAR(SALARY,'$99,999.99')
+   FROM F_STAFFS;
+6. SELECT FIRST_NAME, LAST_NAME, TO_CHAR(SALARY,'99,999.99') AS "Old salary", TO_CHAR(SALARY+2000,'99,999.99') AS "New salary"
+   FROM EMPLOYEES
+   WHERE FIRST_NAME = 'Ellen' AND LAST_NAME = 'Abel';
+7. SELECT TO_CHAR(START_DATE,'Day') AS "Day", START_DATE AS "Date"
+   FROM F_PROMOTIONAL_MENUS
+   WHERE CODE = 110;
+8. SELECT 
+    TO_CHAR(TO_DATE('25-Dec-2004', 'DD-Mon-YYYY'), 'Month DDth, YYYY') AS format_1,
+    UPPER(TO_CHAR(TO_DATE('25-Dec-2004', 'DD-Mon-YYYY'), 'Month DDth, YYYY')) AS format_2,
+    TO_CHAR(TO_DATE('25-Dec-2004', 'DD-Mon-YYYY'), 'DDth Month, YYYY') AS format_3
+   FROM DUAL;
+9. SELECT TO_CHAR(LOW_RANGE,'$9900.00') AS "Low range", TO_CHAR(HIGH_RANGE,'$9900.00') AS "High range"
+   FROM D_PACKAGES;
+10. SELECT TO_DATE('JUNE192004', 'fxMonthDDYYYY') as "Date"
+    FROM DUAL;
+
+
+   

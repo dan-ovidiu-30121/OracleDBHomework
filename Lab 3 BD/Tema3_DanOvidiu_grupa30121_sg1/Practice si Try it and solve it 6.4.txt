@@ -1,0 +1,32 @@
+Practice 6.4
+1. self-join
+2. hierarchical query
+3. LEVEL
+4. START WITH
+5. CONNECT BY PRIOR
+
+1. SELECT worker.LAST_NAME AS "Employee", worker.EMPLOYEE_ID AS "Emp#", manager.LAST_NAME AS "Manager", manager.MANAGER_ID AS "Mgr#"
+   FROM EMPLOYEES worker JOIN EMPLOYEES manager
+   ON (worker.MANAGER_ID = manager.MANAGER_ID);
+2. SELECT worker.LAST_NAME AS "Employee", worker.EMPLOYEE_ID AS "Emp#", manager.LAST_NAME AS "Manager", manager.MANAGER_ID AS "Mgr#"
+   FROM EMPLOYEES worker LEFT OUTER JOIN EMPLOYEES manager
+   ON (worker.MANAGER_ID = manager.MANAGER_ID)
+   ORDER BY worker.LAST_NAME;
+3. SELECT worker.LAST_NAME AS "Emplpyee", worker.HIRE_DATE AS "Emp Hired",
+manager.LAST_NAME AS "Manager", manager.HIRE_DATE AS "Mgr Hired"
+   FROM EMPLOYEES worker JOIN EMPLOYEES manager
+   ON (worker.MANAGER_ID = manager.MANAGER_ID)
+   WHERE worker.HIRE_DATE < manager.HIRE_DATE;
+4. SELECT LAST_NAME, SALARY, DEPARTMENT_ID
+   FROM EMPLOYEES
+   START WITH LAST_NAME = 'De Haan'
+   CONNECT BY PRIOR EMPLOYEE_ID = MANAGER_ID;
+5. employee_id = manager_id
+6. SELECT LPAD(LAST_NAME, LENGTH(LAST_NAME) + 2*LEVEL - 2,'-') AS "Report"
+   FROM EMPLOYEES
+   START WITH EMPLOYEE_ID = 100
+   CONNECT BY PRIOR EMPLOYEE_ID = MANAGER_ID;
+7. SELECT LPAD(LAST_NAME, LENGTH(LAST_NAME) + 2*LEVEL - 2,'-') AS "Report"
+   FROM EMPLOYEES
+   START WITH EMPLOYEE_ID = 100
+   CONNECT BY PRIOR EMPLOYEE_ID = MANAGER_ID AND LAST_NAME != 'De Haan';

@@ -1,0 +1,25 @@
+Practice 7.1
+1. cartesian product join
+2. equijoin
+3. Oracle Proprietary Join
+4. table aliases
+5. join syntax
+
+Try it/Solve it
+1. SELECT p.*,t.*
+   FROM d_play_list_items p, d_track_listings t;
+2. SELECT p.*,t.*
+   FROM d_play_list_items p, d_track_listings t
+   WHERE p.SONG_ID = t.SONG_ID;
+3. SELECT s.TITLE, s.ARTIST, t.CODE, t.DESCRIPTION
+   FROM D_SONGS s, D_TYPES t;
+4. SELECT s.TITLE, s.ARTIST, t.CODE, t.DESCRIPTION
+   FROM D_SONGS s, D_TYPES t
+   WHERE s.ID IN (47,48);
+5. SELECT c.*, e.*, j.*
+   FROM d_clients c, d_events e, d_job_assignments j;
+6. SELECT t.SONG_ID, c.TITLE
+   FROM d_track_listings t, d_cds c
+   WHERE t.CD_NUMBER = c.CD_NUMBER;
+7. a. T b. T c. T d. F e. T f. F g. F
+8. comprehensive analysis and efficiency

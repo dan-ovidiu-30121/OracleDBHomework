@@ -1,0 +1,71 @@
+Practice 10.1
+1.
+2. multiple row subqueries
+3. subquery
+4.
+5. single-row subquery
+6.
+7.
+
+Try it/Solve it
+1. The purpose of a subquery is to retrieve or manipulate data based on the result of another query.
+2. A subquery is a query nested within another query.
+3. SELECT *
+FROM d_play_list_items
+WHERE event_id = (
+    SELECT event_id
+    FROM d_play_list_items
+    WHERE SONG_ID = 45
+);
+4. SELECT ID, NAME
+FROM D_EVENTS
+WHERE COST > (
+   SELECT COST
+   FROM D_EVENTS
+   WHERE ID = 100
+);
+5.  SELECT track
+   FROM D_TRACK_LISTINGS
+   WHERE CD_NUMBER = (
+     SELECT cd_number
+     FROM D_CDS
+     WHERE TITLE = 'Party Music for All Occasions'
+ );
+6. SELECT *
+   FROM D_EVENTS
+   WHERE THEME_CODE = (
+     SELECT CODE
+     FROM D_THEMES
+     WHERE DESCRIPTION = 'Tropical'
+);
+7. SELECT LAST_NAME, FIRST_NAME
+   FROM F_STAFFS
+   WHERE SALARY > (
+     SELECT SALARY
+     FROM F_STAFFS
+     WHERE ID = 12
+);
+8. SELECT LAST_NAME, FIRST_NAME
+   FROM F_STAFFS
+   WHERE STAFF_TYPE <> (
+     SELECT STAFF_TYPE
+     FROM F_STAFFS
+     WHERE FIRST_NAME = 'Bob' AND LAST_NAME = 'Miller'
+);
+9. SELECT FIRST_NAME, LAST_NAME
+   FROM EMPLOYEES
+   WHERE DEPARTMENT_ID = ( 
+     SELECT DEPARTMENT_ID
+     FROM DEPARTMENTS
+     WHERE DEPARTMENT_NAME = 'IT'
+);
+10. SELECT DEPARTMENT_NAME
+   FROM DEPARTMENTS
+   WHERE LOCATION_ID = ( 
+     SELECT LOCATION_ID
+     FROM LOCATIONS
+     WHERE CITY = 'Seattle'
+);
+
+11. a. F b. T c. F
+

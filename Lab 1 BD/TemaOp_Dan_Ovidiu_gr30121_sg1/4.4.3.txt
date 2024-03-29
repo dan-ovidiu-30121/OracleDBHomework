@@ -1,0 +1,3 @@
+SELECT NUME_P AS "Profesori laborator"
+FROM Examen
+WHERE FEL_EXAMEN IN ('Colocviu');

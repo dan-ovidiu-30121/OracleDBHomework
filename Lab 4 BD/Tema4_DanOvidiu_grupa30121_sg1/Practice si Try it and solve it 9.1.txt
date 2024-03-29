@@ -1,0 +1,40 @@
+Practice 9.1
+1. HAVING
+2. GROUP BY
+
+Try it/Solve it
+1. a. F b. T c. F d. T e. F
+2. a. SELECT manager_id
+FROM employees
+GROUP BY manager_id
+HAVING AVG(salary) < 16000;
+   b. SELECT cd_number, COUNT(title)
+FROM d_cds
+WHERE cd_number < 93
+GROUP BY cd_number;
+   c. SELECT ID, artist AS Artist
+FROM d_songs
+WHERE duration IN ('3 min', '6 min', '10 min')
+GROUP BY ID, artist
+HAVING ID < 50;
+   d. SELECT loc_type, rental_fee AS Fee
+FROM d_venues
+WHERE id < 100
+GROUP BY rental_fee, loc_type
+ORDER BY 2;
+
+3. SELECT MAX(song_id)
+   FROM D_TRACK_LISTINGS
+   WHERE track IN (1,2,3)
+   GROUP BY SONG_ID;
+4. a. F b. F c. F
+5. SELECT MAX(AVG(SALARY)), MIN(AVG(SALARY))
+   FROM EMPLOYEES
+   GROUP BY DEPARTMENT_ID
+   ORDER BY DEPARTMENT_ID;
+
+6. SELECT AVG(MAX(SALARY))
+   FROM EMPLOYEES
+   GROUP BY DEPARTMENT_ID;
+
+   

@@ -1,0 +1,42 @@
+Practice 2.1
+1. distinct
+2. || (concatenation)
+3. string
+4. describe
+
+Try it/Solve it
+1. SELECT DISTINCT last_name, address || ',' || city || ',' || state AS "Household", email AS "Email address"
+   from F_CUSTOMERS;
+2. 
+  a. SELECT first_name
+     FROM F_STAFFS;
+  b. SELECT first_name ||' '|| last_name AS "DJs on Demand Calls"
+     FROM D_CLIENTS;
+  c. SELECT DISTINCT quantity
+     FROM f_order_lines;
+  d. SELECT order_number
+     FROM f_order_lines;
+3. SELECT '***' || FIRST_NAME || '***' || FIRST_NAME || '***' AS "Super Star"
+   FROM F_STAFFS;
+4. d
+5. SELECT LAST_NAME AS "EMPLOYEE LAST NAME", SALARY AS "CURRENT SALARY", SALARY*1.05 AS "SALARY WITH 5% RAISE"
+   FROM EMPLOYEES
+6. DESCRIBE EMPLOYEES
+   Columns that are marked nullable are: FIRST_NAME, PHONE_NUMBER, SALARY, COMISSION_PCT, MANAGER_ID, DEPARTAMENT_ID, BONUS.
+   This means that this columns can contain NULL values.
+7. SELECT CD_NUMBER AS "Inventory Item", TITLE AS "CD Title", PRODUCER AS "Music Producer", YEAR AS "Year Purschased"
+   FROM D_CDS
+8. False
+9. True
+10. SELECT employee_id, last_name, salary*12 as "ANUAL SALARY"
+    FROM EMPLOYEES;
+11. * - multiplication
+12. b
+13. projection
+14. c
+15. b
+16. c
+17. c
+18. d
+19. a
+20.

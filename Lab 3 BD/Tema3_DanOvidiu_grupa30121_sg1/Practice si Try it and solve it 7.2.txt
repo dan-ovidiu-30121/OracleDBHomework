@@ -1,0 +1,37 @@
+Practice 7.2
+Try it/Solve it
+1. SELECT e.NAME, p.CODE
+   FROM D_EVENTS e, D_PACKAGES p
+   WHERE e.COST BETWEEN p.LOW_RANGE AND p.HIGH_RANGE;
+
+2. SELECT e.LAST_NAME, e.SALARY, j.GRADE_LEVEL
+   FROM EMPLOYEES e, JOB_GRADES j
+   WHERE e.SALARY BETWEEN j.LOWEST_SAL AND j.HIGHEST_SAL;
+
+3. The condition used is something other than equals.
+
+4. WHERE (a.ranking >= g.lowest_rank) AND (a.ranking <= g.highest_rank)
+
+5. When the table names are long and you want your code to be visible.
+
+6. NONEQUIJOIN
+
+7. SELECT c.LAST_NAME, o.*
+   FROM F_CUSTOMERS c, F_ORDER o
+   WHERE c.ID = o.CUST_ID(+);
+
+8. SELECT e.LAST_NAME, e.DEPARTMENT_ID, d.DEPARTMENT_NAME
+   FROM EMPLOYEES e, DEPARTMENTS d
+   WHERE e.DEPARTMENT_ID = d.DEPARTMENT_ID(+);
+
+9. SELECT e.LAST_NAME, e.DEPARTMENT_ID, d.DEPARTMENT_NAME
+   FROM EMPLOYEES e, DEPARTMENTS d
+   WHERE e.DEPARTMENT_ID(+) = d.DEPARTMENT_ID;
+
+10. a. Syntax error, (+) must be placed before '=' or after d.department_id; not in both places;
+    b. e.employee_id, e.last_name, d.location_id
+       FROM employees e, departments d;
+
+11. SELECT c.TITLE, t.SONG_ID
+    FROM D_CDS c, D_TRACK_LISTINGS t  
+    WHERE c.CD_NUMBER = t.CD_NUMBER(+);

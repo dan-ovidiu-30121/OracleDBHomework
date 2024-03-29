@@ -1,0 +1,27 @@
+Practice 3.1
+1. NOT
+2. AND
+3. rules of precedence
+4. OR
+
+Try it/Solve it
+1. The difference is because we use different operators AND and OR. The clause which includes the AND operator is true only when both conditions are TRUE. The clause which includes the OR operator is true wether first condition is true or the second one is true.
+2. SELECT LAST_NAME 
+   FROM F_STAFFS
+   WHERE LAST_NAME LIKE '%e%' AND LAST_NAME LIKE '%i%';
+3. SELECT FIRST_NAME, LAST_NAME
+   FROM F_STAFFS
+   WHERE STAFF_TYPE NOT IN ('Order Taker') AND SALARY > 6.50;
+4. SELECT FIRST_NAME, LAST_NAME
+   FROM EMPLOYEES
+   WHERE LAST_NAME LIKE 'D%' AND LAST_NAME LIKE '%a%' AND LAST_NAME LIKE '%e%';
+5. SELECT *
+   FROM D_VENUES
+   WHERE LOC_TYPE NOT IN ('Private Home');
+6. a
+7. SELECT *
+   FROM EMPLOYEES
+   WHERE HIRE_DATE BETWEEN '01-jun-1998' AND '31-may-1999' AND SALARY < 8000 AND LAST_NAME LIKE '%en%';
+8. SELECT EMAIL
+   FROM EMPLOYEES
+   WHERE HIRE_DATE > '1-Jan-1996' AND SALARY > 9000 AND COM_STAT IS NULL;

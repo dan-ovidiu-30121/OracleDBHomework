@@ -1,0 +1,26 @@
+Try it / Solve it 3.3
+1. a. single
+   b. multiple
+   c. multiple
+   d. multiple
+   e. single
+   f. single
+2. AVG - as an input we get a number of datas and we do the average of them
+   COUNT - as an input we get multiple numbers and we start counting
+   MAX - as an input we get an array of numbers and we determine the maximum number from the array
+   MIN - same as MAX, only we obtain the minimum number
+   SUM - as an input we get multiple numbers and the output is the result after summing them
+3. SELECT MAX(salary) AS "Maximum salary"  //24000
+   FROM EMPLOYEES;
+
+   SELECT MIN(salary) AS "Minimum salary"  //2500
+   FROM EMPLOYEES; 
+
+   SELECT AVG(salary) AS "Average salary"  //8775
+   FROM EMPLOYEES;
+
+   SELECT COUNT(*) AS "Employees"          //20
+   FROM EMPLOYEES;
+
+   SELECT SUM(salary) AS "Total salaries"  //175500
+   FROM EMPLOYEES;

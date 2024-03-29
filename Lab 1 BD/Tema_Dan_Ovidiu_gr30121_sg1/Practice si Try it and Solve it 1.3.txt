@@ -1,0 +1,42 @@
+Practice 1.3
+1. join
+2. arithmetic operator
+3. column
+4. projection
+5. NULL
+6. Alias
+7. expression
+8. selection
+9. SELECT statement
+10. SELECT clause
+11. FROM clause
+12. keyword
+13. clause
+14. STATEMENT
+
+Try it/Solve it
+1. SELECT ORDER_NUMBER, QUANTITY
+   FROM F_ORDER_LINES
+2. SELECT last_name AS "Client", email AS "Email Address"
+   FROM d_clients;
+3. SELECT last_name, salary * 1.05 + 0.50 AS "new_salary"
+   FROM f_staffs;
+4. c
+5. b
+6. keywords: a. SELECT
+             b. FROM
+   clauses: a. SELECT employee_id, last_name
+            b. FROM employees
+   statements: a. SELECT employee_id, last_name
+                  FROM employees
+7. a. selection:
+      SELECT email AS "email address"
+      FROM D_CLIENTS
+      WHERE last_name LIKE 'Adam'
+      AND first_name LIKE 'Mary';
+   b. projection:
+      SELECT manager_id
+      FROM table;
+8. c
+9. c
+10. b

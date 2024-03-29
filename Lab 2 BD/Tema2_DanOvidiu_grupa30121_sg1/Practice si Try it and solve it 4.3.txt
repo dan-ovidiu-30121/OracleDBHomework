@@ -1,0 +1,32 @@
+Practice 4.3
+1. SYSDATE
+2. ADD_MONTHS
+3. LAST_DAY
+4. NEXT_DAY
+5. MONTHS_BETWEEN
+
+Try it/Solve it
+1. SELECT ROUND((SYSDATE-EVENT_DATE)/30.5) AS "Nearest month"
+   FROM D_EVENTS;
+2. SELECT (TO_DATE('03-Oct-2023', 'DD-Mon-YYYY') - TO_DATE('01-Jul-2023', 'DD-Mon-YYYY'))  AS "Days"
+FROM DUAL;
+3. SELECT (TO_DATE('01-Jan-2024', 'DD-Mon-YYYY') - TO_DATE('31-Dec-2023', 'DD-Mon-YYYY')) 
+   FROM DUAL;
+4. SELECT ROUND(ROUND(SYSDATE,'Month'),'Year') AS "USING ROUND", TRUNC(TRUNC(SYSDATE,'Month'),'Year') AS "USING TRUNC"
+   FROM DUAL;
+5. SELECT LAST_DAY(TO_DATE('05-Jun-2005', 'DD-Mon-YYYY')) AS "Last day of June 2005"
+   FROM DUAL;
+6. SELECT ROUND((SYSDATE-BIRTHDATE)/365)
+   FROM F_STAFFS
+   WHERE FIRST_NAME || ' ' || LAST_NAME = 'Bob Miller';
+7. SELECT ADD_MONTHS(SYSDATE,6) "Appointment"
+   FROM DUAL;
+8. SELECT LAST_DAY(SYSDATE) "Deadline"
+   FROM DUAL;
+9. SELECT ROUND(MONTHS_BETWEEN(TO_DATE('01-Jan-2025', 'DD-Mon-YYYY'),TO_DATE('02-May-2024', 'DD-Mon-YYYY')))
+   FROM DUAL;
+10. SELECT NEXT_DAY(TO_DATE('02-May-2024', 'DD-Mon-YYYY'), 'Friday') AS "Next Friday"
+    FROM DUAL;
+11. MONTHS_BETWEEN
+12. LAST_DAY
+13. For example, to keep record of all their employees hire dates and their deadlines.

@@ -1,0 +1,59 @@
+Practice 8.1
+1. AVG
+2. COUNT
+3. STDDEV
+4. Group functions
+5. MIN
+6. VARIANCE
+7. SUM
+8. MAX
+9. Agregate
+
+1. AVG: Calculates the average value of a numeric column in a group.
+   SELECT AVG(salary) AS average_salary
+   FROM employees;
+
+   COUNT: Counts the number of rows in a group, not including rows with NULL values (unless specified otherwise).
+   SELECT COUNT(*) AS total_employees
+   FROM employees;
+
+   MAX: Returns the maximum value of a column in a group.
+   SELECT MAX(salary) AS max_salary
+   FROM employees;
+ 
+   MIN: Returns the minimum value of a column in a group.
+   SELECT MIN(salary) AS min_salary
+   FROM employees;
+ 
+   STDDEV: Calculates the standard deviation of a numeric column in a group.
+   SELECT STDDEV(salary) AS salary_stddev
+   FROM employees;
+
+   SUM: Calculates the sum of values in a numeric column in a group.
+   SELECT SUM(sales_amount) AS total_sales
+   FROM sales;
+
+   VARIANCE: Calculates the variance of a numeric column in a group.
+   SELECT VARIANCE(salary) AS salary_variance
+   FROM employees;
+
+2. SELECT ROUND(AVG(COST),2) as "Average cost"
+   FROM D_EVENTS;
+
+3. SELECT AVG(SALARY) as "Average salary"
+   FROM F_STAFFS
+   WHERE MANAGER_ID = 19;
+4. SELECT SUM(SALARY) AS "Sum of salaries"
+   FROM F_STAFFS
+   WHERE MANAGER_ID IN (9,12);
+5. SELECT MIN(SALARY), MAX(HIRE_DATE), MIN(LAST_NAME), MAX(LAST_NAME)
+   FROM EMPLOYEES
+   WHERE DEPARTMENT_ID IN (50,60);
+6. One row
+7. part-time vs full-time employees
+8. March 30, 1969
+9. SELECT AVG(ORDER_TOTAL)
+   FROM F_ORDERS
+   WHERE ORDER_DATE BETWEEN '01-Jan-2002' AND '21-Dec-2002';
+10. 29-Jan-2000
+11. SUM(operatin_cost)

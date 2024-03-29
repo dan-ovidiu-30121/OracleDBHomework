@@ -1,0 +1,44 @@
+Practice 3.2
+1. ORDER BY
+2. ORDER BY ... DESC
+3. sort
+
+Try it / Solve it
+1. SELECT employee_id AS "Number", first_name, last_name
+   FROM employees
+   ORDER BY "Number";
+2. SELECT *
+   FROM D_CDS
+   ORDER BY year, title;
+3. SELECT TITLE AS "Our collection"
+   FROM D_CDS
+   ORDER BY "Our collection" DESC;
+4. SELECT first_name, last_name, stud_ID, park_num
+   FROM students
+   ORDER BY last_name;
+5. SELECT DEPARTMENT_ID, LAST_NAME, MANAGER_ID
+   FROM EMPLOYEES
+   WHERE EMPLOYEE_ID <= 125
+   ORDER BY DEPARTMENT_ID DESC;
+
+Extension Activities
+1. e
+2. c
+3. c
+4. a
+5. c
+6. d
+7. b
+8. b
+9. d
+10. b
+11. SELECT last_name
+    FROM employees
+    WHERE last_name LIKE 'St%';
+12. salary < 1900 AND salary > 2100
+13. a. WHERE departament_id NOT IN (101,102,103);
+    b. WHERE last_name = 'King';
+    c. WHERE start_date LIKE '05-May-1998';
+    d. WHERE salary BETWEEN 5000 AND 7000;
+    e. WHERE ID != 10;
+14. 410

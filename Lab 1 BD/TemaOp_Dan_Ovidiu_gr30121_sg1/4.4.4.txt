@@ -1,0 +1,3 @@
+SELECT NUME || ' ' || PRENUME AS "Studenti nascuti inainte de 01-04-1985"
+FROM Student
+WHERE DATA_N < '04-01-1985';

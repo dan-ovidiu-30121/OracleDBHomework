@@ -1,0 +1,37 @@
+Practice 2.2
+1. WHERE
+2. comparison operator
+
+Try it/Solve it
+1. SELECT FIRST_NAME, LAST_NAME, ADDRESS
+   FROM F_CUSTOMERS 
+   WHERE ID = 456;
+2. SELECT NAME, START_DATE, END_DATE 
+   FROM F_PROMOTIONAL_MENUS
+   WHERE GIVE_AWAY = 'ballpen and highlighter';
+3. SELECT 'The '||YEAR||''||'recording in our database is'||''||TITLE "Oldest"
+   FROM D_CDS
+   WHERE YEAR = (SELECT MIN(YEAR) FROM D_CDS);
+4. SELECT PRODUCER, TITLE
+   FROM D_CDS
+   WHERE TITLE = 'Carpe Diem';
+5. SELECT TITLE AS "CD Titles", YEAR AS "CDs that were produced before 2000"
+   FROM D_CDS 
+   WHERE YEAR < 2000;
+6. a,b,c,d
+7. SELECT studentno, fname, lname
+   FROM students
+   WHERE sex = 'F';
+8. SELECT studentno AS "Student Number"
+   FROM students
+   WHERE major = 'PE';
+9. SELECT *
+   FROM students
+   WHERE sex = 'M';
+10. SELECT TITLE, YEAR
+    FROM D_CDS
+    WHERE YEAR <> 2000;
+11. SELECT FIRST_NAME, LAST_NAME, BIRTHDATE
+    FROM F_STAFFS
+    WHERE BIRTHDATE < '01-Jan-1980';
+    

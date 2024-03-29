@@ -1,0 +1,23 @@
+Practice 5.2
+1. NVL
+2. COALESCE
+3. NVL2
+4. NULLIF
+
+Try it/solve it
+1. SELECT NAME, START_DATE, NVL2(END_DATE,'end in two weeks',SYSDATE)
+   FROM F_PROMOTIONAL_MENUS;
+2. SELECT LAST_NAME, NVL(OVERTIME_RATE, 0) AS "Overtime Status"
+   FROM F_STAFFS;
+3. SELECT LAST_NAME, NVL(TO_CHAR(OVERTIME_RATE,'$99.00'),'$5.00') AS "Overtime Status"
+   FROM F_STAFFS;
+4. SELECT LAST_NAME, NVL(MANAGER_ID,9999)
+   FROM F_STAFFS;
+5. c
+6. It returns the first non-null last names: Doe, Miller, Tuttle.
+7. a. SELECT FIRST_NAME || ' ' || LAST_NAME AS "Name", TO_CHAR(HIRE_DATE, 'Month') AS "Hire month"
+      FROM EMPLOYEES;
+   b. SELECT FIRST_NAME || ' ' || LAST_NAME AS "Name", NULLIF(TO_CHAR(HIRE_DATE, 'Month'),'September') AS "Hire month"
+      FROM EMPLOYEES;
+8. SELECT FIRST_NAME, NVL(SPECIALTY, 'No speciality')
+   FROM D_PARTNERS;

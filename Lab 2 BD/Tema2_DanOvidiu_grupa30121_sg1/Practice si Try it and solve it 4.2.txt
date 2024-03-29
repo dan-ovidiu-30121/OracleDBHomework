@@ -1,0 +1,31 @@
+Vocabulary :
+
+1. TRUNC
+2. number function
+3. MOD
+4. ROUND
+
+
+Try it / Solve it :
+
+1. SELECT last_name , salary , ROUND(salary/1.55 , 2) AS "Salary devided by 1.55"
+   FROM employees
+   WHERE employee_id BETWEEN 100 AND 102;
+
+2.SELECT last_name , salary , TRUNC(salary*1.0533 , 2) AS "Raised Salary"
+  FROM employees
+  WHERE department_id = 80;
+
+3.SELECT CASE WHEN MOD(38873,2) = 1 THEN 'ODD' ELSE 'EVEN' END AS "Odd or Even"
+  FROM DUAL;
+
+4. 845.6 , 30695.35 , 30700 , 2.3
+
+5.SELECT last_name , salary
+  FROM employees
+  WHERE MOD(salary , 3) = 0;
+
+6.SELECT MOD(34 , 8) AS Example
+  FROM DUAL;
+
+7.SELECT (565.784 - ROUND(565.784,2))1000(:xx) AS Diff

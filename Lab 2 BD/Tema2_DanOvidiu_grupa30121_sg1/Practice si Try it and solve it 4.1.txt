@@ -1,0 +1,57 @@
+Practice 4.1
+1. dual table
+2. format
+3. INITCAP
+4. character manipulation functions
+5. TRIM
+6. comparision operators
+7. single-row functions
+8. UPPER
+9. input
+10. CONCAT
+11. output
+12. LOWER
+13. LPAD
+14. SUBSTR
+15. REPLACE
+16. INSTR
+17. LENGTH
+18. RPAD
+
+Try it/solve it
+1. SELECT 'Oracle'||' '||'Internet'||' '||'Academy' AS "The Best Class"
+   FROM DUAL;
+2. SELECT SUBSTR('Oracle'||' '||'Internet'||' '||'Academy',INSTR('Oracle'||' '||'Internet'||' '||'Academy','net'),3) AS "The Net"
+   FROM DUAL;
+3. SELECT LENGTH('Oracle'||' '||'Internet'||' '||'Academy') AS "Length of the string"
+   FROM DUAL;
+   Length of the string is 23.
+4. SELECT INSTR('Oracle'||' '||'Internet'||' '||'Academy','l') AS "Position of the character l"
+   FROM DUAL;
+   The position of the 'l' is 5.
+5. SELECT 
+    LPAD('Oracle', 10, '*') || 
+    LPAD('Internet', 12, '*') || 
+    RPAD(LPAD('Academy', 11, '*'),15,'*')  
+   FROM DUAL;
+6. SELECT
+    RPAD('Oracle',9,'$')||
+    RPAD('Internet',11,'$')||
+    'Academy'
+   FROM DUAL;
+7. SELECT REPLACE('Oracle Internet Academy', 'Internet', '2013-2014') AS "The Best Class"
+  FROM DUAL;
+8. SELECT order_date, LPAD(order_total,LENGTH(order_total)+1,'$') AS "TOTAL"
+FROM F_ORDERS;
+9. SELECT FIRST_NAME || ' ' || LAST_NAME || ' ' || ADDRESS || ' ' || CITY || ',' || ' ' || STATE || ' ' || ZIP AS "ADDRESS"
+  FROM F_CUSTOMERS
+  WHERE FIRST_NAME LIKE 'Z%';
+10. SELECT CONCAT(SUBSTR(FIRST_NAME,1,1),LAST_NAME) AS "Name", SALARY,  DEPARTMENT_ID
+    FROM EMPLOYEES
+    WHERE DEPARTMENT_ID = :enter_dept_id;
+11. SELECT DEPARTMENT_ID, DEPARTMENT_NAME, LOCATION_ID
+    FROM DEPARTMENTS
+    WHERE DEPARTMENT_NAME = :the_departmanet_of_your_choice;
+12. SELECT *
+    FROM EMPLOYEES
+    WHERE SUBSTR(HIRE_DATE,4,3) = :enter_month;

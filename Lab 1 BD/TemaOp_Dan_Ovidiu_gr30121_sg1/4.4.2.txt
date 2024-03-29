@@ -1,0 +1,3 @@
+SELECT TITLU_MAT
+FROM Examen
+WHERE NUME_P IN ('Pop');
